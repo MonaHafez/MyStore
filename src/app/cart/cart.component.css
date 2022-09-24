@@ -1,0 +1,18 @@
+img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    margin-left: 3rem;
+}
+
+.cart-container {
+    margin-top: 4rem;
+}
+
+.empty-cart-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}

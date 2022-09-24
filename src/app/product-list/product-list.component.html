@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <app-item
+            fxFlex="30" fxFlex.md="40" fxFlex.sm="45" fxFlex.xs="100"
+            *ngFor="let product of products; let idx = index"
+            [product]="product"
+            [productId]="idx+1"
+            (addToCart)="alertService.openSnackBar($event.message, 'OK')"
+            (removeFromCart)="alertService.openSnackBar($event.message, 'OK')">
+    </app-item>
+</div>
