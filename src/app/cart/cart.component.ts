@@ -53,4 +53,14 @@ export class CartComponent implements OnInit {
       await this.router.navigate(['/cart/submit', {fullName: this.fullName, totalAmount: this.totalAmount}]);
     }
   }
+
+  removeFromCartAction(item: CartDetail) {
+    this.cartService.removeCart({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      url: "",
+      amount: 0,
+    });
+  }
 }

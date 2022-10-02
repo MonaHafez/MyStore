@@ -12,7 +12,8 @@
                     <input matInput [ngModel]="cartItem.value.amount"
                            (ngModelChange)="changeItemAmount(cartItem.value, $event)"
                            [value]="cartItem.value.amount+''"/>
-                </mat-form-field>
+                </mat-form-field><br/>
+                <button mat-flat-button color="primary" (click)="removeFromCartAction(cartItem.value)">Remove from cart</button>
             </div>
         </div>
         <h1>Total: <span>${{totalAmount.toFixed(2)}}</span></h1>
